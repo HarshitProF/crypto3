@@ -1,7 +1,7 @@
 import mysql.connector
 class db:
     def __init__(self):
-        self.conn=mysql.connector.connect(host="us-cdbr-east-06.cleardb.net",user="baecc8fd9cfe27",password='e4627e4a',database="heroku_7be42882d5f4d2e")
+        self.conn=mysql.connector.connect(host="us-cdbr-east-06.cleardb.net",user="becdcff4c6b5fd",password='0ae931f4',database="heroku_346df04c640b579")
         self.cursor=self.conn.cursor()
         print(self.conn)
         #cursor.execute('drop table chats')
