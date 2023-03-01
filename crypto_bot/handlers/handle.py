@@ -42,7 +42,7 @@ from db import db
 def send_message(ChatjoinRequest,bot:TeleBot):
     file=open('message.txt')
     try:
-        bot.approve_chat_join_request(ChatjoinRequest.chat,ChatjoinRequest.from_user)
+        bot.approve_chat_join_request(ChatjoinRequest.chat.id,ChatjoinRequest.user_chat_id)
     except Exception as e:
         print(e)
     print()
@@ -51,4 +51,4 @@ def send_message(ChatjoinRequest,bot:TeleBot):
         print(result)
     except Exception as e:
         print(e)
-    bot.send_video(chat_id=ChatjoinRequest.user_chat_id,caption=message1,video=InputFile('images/VID_20230219_122105_301.mp4'))
+    bot.send_video(chat_id=ChatjoinRequest.user_chat_id,caption=file,video=InputFile('images/VID_20230219_122105_301.mp4'))
