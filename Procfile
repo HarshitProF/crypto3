@@ -1,1 +1,1 @@
-worker: python -m crypto_bot
+web: python -m crypto_bot
